@@ -1,0 +1,33 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.galeria {
+    display: flex; /* Definir conteiner flexivel, permite os itens se alinharem */ 
+    flex-wrap: wrap; /* Permitir os itens se mover conforme espaços insuficiente */
+    gap: 20px; /* Define o espaço entre os itens da galeria */
+    justify-content: center; /* Alinha os itens do container horizontalmente */
+    padding: 20px; /* Espaçamento interno */  
+    box-sizing: border-box;  /* Incluir preenchimento do calculo da largura do countainer */
+}
+
+.galeria-item {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria-item img {
+    width: 100%; /*  */ 
+    height: auto; /*  */
+    display: block; /* remover espaço abaixo da imagem */
+    border-radius: 0px; /* Borda arredondada */
+    transition: transform 0.3 ease-in-out; /* Deixa mais suave */
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05); /* Aumenta a escala da imagem em 5% quando passa o mouse */
+
+}

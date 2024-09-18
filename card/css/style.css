@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Jacques+Francois+Shadow&display=swap');
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -11,11 +12,19 @@ body {
     align-items:center;
 }
 
+h2 {
+    font-family: "Jacques Francois Shadow", Arial, Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+}
+
 .container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* permite que os cartões se movam para a linha de baixo*/
+    gap: 20px;/* espaço entre cartões */ 
+    padding: 20px; /* adiciona um pouco de espaço ao redor dos cartões */
 }
 
 .card {
@@ -28,6 +37,15 @@ body {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
+    transition: transform 0.3 ease-in-out;
+}
+
+.fa-star {
+    color: rgb(196, 196, 196);
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card-img {
