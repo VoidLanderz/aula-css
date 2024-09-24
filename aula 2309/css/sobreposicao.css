@@ -1,0 +1,47 @@
+.container {
+    position: relative; /* Definindo ocntainer que o permite elementos pocisionados absolutamente */
+    width: 600px;  /* Definindo a largura do meu container para 400px */
+    height: 400px;  /* Definindo a altura do meu container para 600px */
+}
+
+.container img {
+    width: 100%; /* A imagem oreencha toda a largura do container */
+    height: auto; /* MAnter a proporção da imagem ao ajustar a altura automaticamente */
+}
+
+.mensagemsobreposta {
+    position: absolute;
+    top: 0; /* reseta o top para ficar no limite do topo */
+    left: 0; /* reseta meu left para ficar no limite esquerdo */
+    width: 100%; /* ocupa toda a largura do container */
+    height: 100%; /* ocupa toda a altura do container */
+    background-color: rgb(0, 0, 0, 0.6); /* o final muda a opacidade np caso */
+    color: #fff; /* cor da escrita */
+    display: flex; /* Usa flexbox para organizar o conteudo dadiv mensagemsobreposta */
+    align-items: center; /*alinhando conteudo verticalmente*/
+    justify-content: center; /*alinhando conteudo horizontalmente */
+    font-size: 24px; /* Tamanho da fonte */
+    z-index: 1; /* sobrepocição da camada */
+    transition: opacity 0.5s ease; /* transição na opacidade para suavisar */
+}
+
+.container:hover .mensagemsobreposta {
+    opacity: 0; /* mudando a opacidade para  ( desaparece) */
+}
+
+@media (max-width: 600px) {
+    body{
+        background-color: red;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+    body{
+        background-color: green;
+    }
+}
+@media (min-width: 1201px) {
+    body{
+        background-color: aqua;
+    }
+}
